@@ -88,6 +88,12 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    favoriteChannels: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Channel",
+      },
+    ],
   },
   {
     timestamps: true,

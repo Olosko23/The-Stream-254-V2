@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
+const channelRoutes = require("./routes/channelRoutes");
 
 const app = express();
 app.use(cors());
@@ -25,3 +26,4 @@ mongoose
   });
 
 app.use("/api/v1", userRoutes);
+app.use("/api/v1", channelRoutes);
